@@ -78,7 +78,7 @@ jobs:
         run: |
           # check if there is tag pointing at HEAD, otherwise take the HEAD SHA-1 as OPENOCD_TAG
           OPENOCD_TAG="1.0"
-          [ -z $OPENOCD_TAG ] && OPENOCD_TAG="`git rev-parse --short HEAD`"
+          [ -z $OPENOCD_TAG ] && OPENOCD_TAG="1.0"
           # check if there is tag pointing at HEAD, if so the release will have the same name as the tag,
           # otherwise it will be named 'latest'
           RELEASE_NAME="latest"
